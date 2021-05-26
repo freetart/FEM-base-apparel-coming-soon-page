@@ -54,6 +54,7 @@
     left: 2rem;
     font-size: size(xxs);
     font-style: italic;
+    color: color(softRed);
     display: none;
 
     @include responsive(xs) {
