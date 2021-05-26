@@ -16,31 +16,37 @@
             <img src="./images/logo.svg" alt="logo" class="launch-info__logo" />
           </header>
           <article class="launch-info__content">
-            <h1 class="launch-info__heading">We're coming soon</h1>
+            <h1 class="launch-info__heading">
+              <span class="launch-info__heading-span">We're</span> coming soon
+            </h1>
             <p class="launch-info__lead">
               Hello fellow shoppers! We're currently building our new fashion
               store. Add your email below to stay up-to-date with announcements
               and our launch deals.
             </p>
-            <div class="cta">
+            <form class="cta">
               <input
                 type="text"
                 placeholder="Email Address"
                 class="cta__input"
               />
+              <img
+                src="./images/icon-error.svg"
+                alt="cta error icon"
+                class="cta__input-icon"
+              />
+              <small class="cta__message">Hello</small>
               <button type="submit" class="cta__submit">
-                <img src="./images/icon-arrow.svg" alt="submit button icon" />
+                <img
+                  src="./images/icon-arrow.svg"
+                  alt="submit button icon"
+                  class="cta__submit-icon"
+                />
               </button>
-            </div>
+            </form>
           </article>
         </div>
-        <div class="launch-hero">
-          <img
-            src="./images/hero-desktop.jpg"
-            alt="desktop hero"
-            class="launch-hero__img"
-          />
-        </div>
+        <div class="launch-hero"></div>
       </div>
     </section>
     <script src="./js/main.js"></script>

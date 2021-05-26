@@ -1,2 +1,61 @@
 // imports
 @use "../abstracts/abstracts" as *;
+
+// launch
+.launch {
+  min-height: 100vh;
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    background: url("../images/bg-pattern-desktop.svg") center center/cover;
+  }
+
+  &-info {
+    @include sectionSpacing;
+    width: 70%;
+    margin: 0 auto;
+
+    &__logo {
+      width: 20rem;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: left;
+      min-height: 100%;
+    }
+
+    &__heading {
+      @include headingStyles;
+      font-size: size(xxl) + 5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1.5rem;
+
+      &-span {
+        color: color(desaturatedRed);
+        font-weight: 300;
+      }
+    }
+
+    &__lead {
+      @include textStyles;
+      font-size: size(sm);
+      color: color(desaturatedRed);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-hero {
+    background: url("../images/portrait.jpg") top center/cover;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
