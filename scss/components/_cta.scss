@@ -1,0 +1,104 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// cta
+.cta {
+  position: relative;
+
+  &.error {
+    .cta__input {
+      border: 0.1rem solid color(softRed);
+    }
+
+    .cta__input-icon {
+      display: block;
+    }
+
+    .cta__message {
+      display: block;
+    }
+  }
+
+  &__input {
+    position: relative;
+    width: 100%;
+    border-radius: 5rem;
+    outline: 0;
+    border: 0.1rem solid color(desaturatedRed);
+    padding: 2rem 1.5rem;
+    display: inline-block;
+    font-size: size(xs);
+
+    @include responsive(xs) {
+      padding: 1.5rem 1rem;
+    }
+
+    &-icon {
+      position: absolute;
+      width: 2.5rem;
+      top: 1.5rem;
+      right: 13rem;
+      display: none;
+
+      @include responsive(xs) {
+        top: 1.3rem;
+        right: 8rem;
+      }
+    }
+  }
+
+  &__message {
+    @include textStyles;
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    font-size: size(xxs);
+    font-style: italic;
+    color: color(softRed);
+    display: none;
+
+    @include responsive(xs) {
+      top: 5rem;
+    }
+  }
+
+  // input placeholder color
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: color(desaturatedRed);
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: color(desaturatedRed);
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: color(desaturatedRed);
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: color(desaturatedRed);
+  }
+
+  &__submit {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    border-radius: 5rem;
+    background-color: color(desaturatedRed);
+    padding: 1.8rem 5rem;
+    outline: 0;
+    border: 0;
+    box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    @include responsive(xs) {
+      padding: 1.2rem 3rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten(color(desaturatedRed), 5%);
+    }
+  }
+}
