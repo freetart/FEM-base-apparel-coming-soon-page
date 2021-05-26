@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="./images/favicon/koala.ico" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Frontend Mentor Base Apparel Coming Soon Page</title>
@@ -22,19 +24,19 @@
     <section class="launch">
       <div class="launch-content">
         <div class="launch-info">
-          <header class="launch-info__header">
+          <header class="launch-info__header" data-aos="fade-right">
             <img src="./images/logo.svg" alt="logo" class="launch-info__logo" />
           </header>
           <article class="launch-info__content">
-            <h1 class="launch-info__heading">
+            <h1 class="launch-info__heading" data-aos="fade-down">
               <span class="launch-info__heading-span">We're</span> coming soon
             </h1>
-            <p class="launch-info__lead">
+            <p class="launch-info__lead" data-aos="fade-left">
               Hello fellow shoppers! We're currently building our new fashion
               store. Add your email below to stay up-to-date with announcements
               and our launch deals.
             </p>
-            <form class="cta">
+            <form class="cta" data-aos="fade-up">
               <input
                 type="text"
                 placeholder="Email Address"
@@ -85,6 +87,12 @@
         class="footer__logo"
       />
     </footer>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 100, duration: 1000, once: true });
+    </script>
+    <!-- js -->
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
